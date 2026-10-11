@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Smart Campus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="images/logo.svg" alt="Smart Campus logo"> Smart Campus</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="profile.html" class="active">Profile</a>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Animated page banner -->
+  <section class="page-banner">
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+    <div class="shape s3"></div>
+    <div class="shape s4"></div>
+    <div class="container banner-content">
+      <h1>👤 Student Profile</h1>
+      <p>Register and view students</p>
+    </div>
+  </section>
+
+  <main class="container section">
+    <h2>Student Registration / Profile</h2>
+
+    <form id="profileForm" class="form-card" novalidate>
+
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="e.g. Ayesha Khan">
+        <span class="error" id="fullNameError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="regNo">Registration Number</label>
+        <input type="text" id="regNo" placeholder="9 digits">
+        <span class="error" id="regNoError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="name@university.edu.pk">
+        <span class="error" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="department">Department</label>
+        <select id="department">
+          <option value="">-- Select Department --</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Software Engineering">Software Engineering</option>
+          <option value="Information Technology">Information Technology</option>
+          <option value="Data Science">Data Science</option>
+        </select>
+        <span class="error" id="departmentError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="semester">Semester</label>
+        <select id="semester">
+          <option value="">-- Select Semester --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+        <span class="error" id="semesterError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="03XXXXXXXXX">
+        <span class="error" id="phoneError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Minimum 8 characters">
+        <span class="error" id="passwordError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Re-enter password">
+        <span class="error" id="confirmPasswordError"></span>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Register</button>
+      <p id="formMessage" class="message"></p>
+    </form>
+
+    <h2 style="margin-top: 2.5rem;">Registered Students</h2>
+    <div id="studentList" class="grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Smart Campus Portal | Contact: info@campus.edu | Rawalpindi, Pakistan</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

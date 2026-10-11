@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule | Smart Campus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="images/logo.svg" alt="Smart Campus logo"> Smart Campus</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="schedule.html" class="active">Schedule</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="profile.html">Profile</a>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Animated page banner -->
+  <section class="page-banner">
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+    <div class="shape s3"></div>
+    <div class="shape s4"></div>
+    <div class="container banner-content">
+      <h1>🗓️ Weekly Schedule</h1>
+      <p>Know your classes, never miss a lecture</p>
+    </div>
+  </section>
+
+  <main class="container section">
+    <h2>Weekly Class Schedule</h2>
+
+    <div class="filters">
+      <select id="dayFilter">
+        <option value="all">All Days</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+      </select>
+    </div>
+
+    <p id="scheduleMessage" class="muted"></p>
+
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Course</th>
+          <th>Instructor</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Room / Lab</th>
+        </tr>
+      </thead>
+      <tbody id="scheduleBody"></tbody>
+    </table>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Smart Campus Portal | Contact: info@campus.edu | Rawalpindi, Pakistan</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/schedule.js"></script>
+</body>
+</html>

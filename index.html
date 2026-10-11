@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Campus Student Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="images/logo.svg" alt="Smart Campus logo"> Smart Campus</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="profile.html">Profile</a>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+      <div class="shape s4"></div>
+      <div class="container hero-content">
+        <h1>Welcome to Smart Campus Portal</h1>
+        <p>Courses, schedule, tasks and announcements, all in one place.</p>
+        <a href="courses.html" class="btn">Explore Courses</a>
+      </div>
+    </section>
+
+    <!-- Student Dashboard -->
+    <section class="container section">
+      <h2>Student Dashboard</h2>
+
+      <!-- Registered student ka banner (JS se bharega) -->
+      <div id="studentBanner"></div>
+
+      <div class="grid dashboard-grid">
+        <div class="card dashboard-card c1">
+          <div class="dash-icon">📚</div>
+          <p class="dash-label">Registered Courses</p>
+          <p class="dash-number" id="dashRegistered">0</p>
+        </div>
+        <div class="card dashboard-card c2">
+          <div class="dash-icon">🏆</div>
+          <p class="dash-label">Completed Courses</p>
+          <p class="dash-number" id="dashCompleted">0</p>
+        </div>
+        <div class="card dashboard-card c3">
+          <div class="dash-icon">🎓</div>
+          <p class="dash-label">Current Semester</p>
+          <p class="dash-number" id="dashSemester">0</p>
+        </div>
+        <div class="card dashboard-card c4">
+          <div class="dash-icon">📊</div>
+          <p class="dash-label">Attendance</p>
+          <p class="dash-number" id="dashAttendance">0%</p>
+          <small id="dashAttendanceNote" class="muted"></small>
+        </div>
+        <div class="card dashboard-card c5">
+          <div class="dash-icon">📝</div>
+          <p class="dash-label">Upcoming Assignments</p>
+          <p class="dash-number" id="dashAssignments">0</p>
+        </div>
+        <div class="card dashboard-card c6">
+          <div class="dash-icon">📅</div>
+          <p class="dash-label">Upcoming Events</p>
+          <p class="dash-number" id="dashEvents">0</p>
+        </div>
+      </div>
+    </section>
+
+    
+       <!-- About -->
+    <section class="container section">
+      <h2>About the Portal</h2>
+      <p class="about-text">
+        Smart Campus is a student-friendly web portal that brings courses,
+        schedules, tasks and announcements into one place, so students can
+        plan better and never miss an important update.
+      </p>
+
+      <div class="grid">
+        <div class="card">🔍 <h3>Find Courses</h3><p>Search and filter courses easily.</p></div>
+        <div class="card">🗓️ <h3>Stay on Time</h3><p>View your weekly class timetable.</p></div>
+        <div class="card">✅ <h3>Manage Tasks</h3><p>Track assignments and deadlines.</p></div>
+        <div class="card">📢 <h3>Stay Updated</h3><p>Read the latest announcements.</p></div>
+      </div>
+    </section>
+
+    <!-- Announcements -->
+    <section class="container section">
+      <h2>Important Announcements</h2>
+
+      <div class="filters">
+        <select id="announcementFilter">
+          <option value="all">All Categories</option>
+          <option value="Academic">Academic</option>
+          <option value="Examination">Examination</option>
+          <option value="Event">Event</option>
+          <option value="General">General</option>
+        </select>
+      </div>
+
+      <p id="announcementMessage" class="muted"></p>
+      <div id="announcementList" class="grid"></div>
+    </section>
+
+    <!-- Quick Access -->
+    <section class="container section">
+      <h2>Quick Access</h2>
+      <div class="grid">
+        <a href="courses.html" class="card">📚 <h3>Courses</h3></a>
+        <a href="schedule.html" class="card">🗓️ <h3>Schedule</h3></a>
+        <a href="tasks.html" class="card">✅ <h3>Tasks</h3></a>
+        <a href="profile.html" class="card">👤 <h3>Profile</h3></a>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="container section">
+      <h2>Upcoming Events</h2>
+      <div id="eventList" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Smart Campus Portal | Contact: info@campus.edu | Rawalpindi, Pakistan</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

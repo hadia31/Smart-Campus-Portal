@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | Smart Campus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="images/logo.svg" alt="Smart Campus logo"> Smart Campus</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="profile.html">Profile</a>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Animated page banner -->
+  <section class="page-banner">
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+    <div class="shape s3"></div>
+    <div class="shape s4"></div>
+    <div class="container banner-content">
+      <h1>📚 Courses</h1>
+      <p>Browse, search and filter all your courses</p>
+    </div>
+  </section>
+
+  <main class="container section">
+    <h2>Course Management</h2>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search by course name or code...">
+
+      <select id="semesterFilter">
+        <option value="all">All Semesters</option>
+        <option value="1">Semester 1</option>
+        <option value="2">Semester 2</option>
+        <option value="3">Semester 3</option>
+        <option value="4">Semester 4</option>
+        <option value="5">Semester 5</option>
+        <option value="6">Semester 6</option>
+      </select>
+
+      <select id="statusFilter">
+        <option value="all">All Status</option>
+        <option value="Completed">Completed</option>
+        <option value="Registered">Registered</option>
+        <option value="Pending">Pending</option>
+      </select>
+    </div>
+
+    <p id="resultMessage" class="muted"></p>
+
+    <div id="courseList" class="grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Smart Campus Portal | Contact: info@campus.edu | Rawalpindi, Pakistan</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/courses.js"></script>
+</body>
+</html>

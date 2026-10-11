@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks | Smart Campus</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="images/logo.svg" alt="Smart Campus logo"> Smart Campus</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="tasks.html" class="active">Tasks</a>
+        <a href="profile.html">Profile</a>
+        <button id="themeToggle" class="theme-btn">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Animated page banner -->
+  <section class="page-banner">
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+    <div class="shape s3"></div>
+    <div class="shape s4"></div>
+    <div class="container banner-content">
+      <h1>✅ Task Manager</h1>
+      <p>Plan your assignments and stay on top of deadlines</p>
+    </div>
+  </section>
+
+  <main class="container section">
+    <h2>Assignment / Task Manager</h2>
+
+    <!-- Task add karne ka form -->
+    <form id="taskForm" class="task-form">
+      <input type="text" id="taskTitle" placeholder="Task title">
+
+      <select id="taskCourse">
+        <option value="Web Technology">Web Technology</option>
+        <option value="HCI & Computer Graphics">HCI & Computer Graphics</option>
+        <option value="Mobile App Development">Mobile App Development</option>
+        <option value="Database Systems">Database Systems</option>
+      </select>
+
+      <input type="date" id="taskDue">
+
+      <select id="taskPriority">
+        <option value="High">High</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="Low">Low</option>
+      </select>
+
+      <button type="submit" class="btn btn-primary">Add Task</button>
+    </form>
+
+    <!-- Feedback message -->
+    <p id="taskMessage" class="message"></p>
+
+    <p id="taskCount" class="muted"></p>
+
+    <!-- Tasks yahan JS se aayenge -->
+    <ul id="taskList" class="task-list"></ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Smart Campus Portal | Contact: info@campus.edu | Rawalpindi, Pakistan</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/tasks.js"></script>
+</body>
+</html>
